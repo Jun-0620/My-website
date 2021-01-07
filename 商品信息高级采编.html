@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>商品信息高级采编</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			width: 900px;
+			height: 2000px;
+			overflow-x: hidden;
+		}
+				#div{
+			width: 1000px;
+			overflow:hidden; 
+		}
+		/*标题-nav*/body div ul{
+			width: 85%;
+			height: 50px;
+			max-width: 90%;
+			list-style: none;
+			text-align: center;
+		}
+		div ul li{
+			display: inline-block;
+			float: left;
+			padding:0px 45px;
+			overflow: hidden;
+		}
+		ul{
+			position: absolute;
+			top: 1%;
+			left: 20%;
+		}
+		li a:hover{
+			color: #d2b48c;
+		}
+		a{
+			text-decoration: none;
+			color: #696969;
+			font-size: 18px;
+		}
+		div ul li .child{
+			display: block;
+            visibility: hidden;
+            width: 14%;
+            height: 50px;
+            background-color: rgba(255,255,255,0.8);
+            position: absolute;
+            top: 25px;
+            left: 170px;
+            z-index: 99;
+            padding-right: -30px;
+            text-align: left;
+          }
+		menu ul li:hover .child{
+			visibility: visible;
+		}
+		div ul li:hover dl{
+			display: block;
+			visibility: visible;
+			z-index: 99;
+		}
+/*装饰小云朵*/@font-face {
+  font-family: 'iconfont';
+  src: url('fonts/font_1937768_0pelog9qvgzd/iconfont.eot');
+  src: url('fonts/font_1937768_0pelog9qvgzd/iconfont.eot?#iefix') format('embedded-opentype'),
+      url('fonts/font_1937768_0pelog9qvgzd/iconfont.woff2') format('woff2'),
+      url('fonts/font_1937768_0pelog9qvgzd/iconfont.woff') format('woff'),
+      url('fonts/font_1937768_0pelog9qvgzd/iconfont.ttf') format('truetype'),
+      url('fonts/font_1937768_0pelog9qvgzd/iconfont.svg#iconfont') format('svg');
+}
+	.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 30px;
+  font-style: normal;
+  color: #708090;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+	.hr2{
+		width: 780px;
+		height: 1px;
+		color: #708090;
+		border:none; 
+		border-top: 1px solid #708090;
+		position: absolute;
+		top: 10%;
+		left: 20%;
+	}
+	.hr1{
+		width: 780px;
+		height: 1px;
+		color: #708090;
+		border:none; 
+		border-top: 1px solid #708090;
+		position: absolute;
+		top: 11%;
+		left: 20%;
+	}
+	.p3{
+		position: absolute;
+		top: 98%;
+		left: 38%;
+		color:  #708090;
+	}
+	/*摄影的*/@font-face {
+  font-family: 'iconfont';
+  src: url('fonts/font_1937768_6u1dvkx9qjp/iconfont.eot');
+  src: url('fonts/font_1937768_6u1dvkx9qjp/iconfont.eot?#iefix') format('embedded-opentype'),
+      url('fonts/font_1937768_6u1dvkx9qjp/iconfont.woff2') format('woff2'),
+      url('fonts/font_1937768_6u1dvkx9qjp/iconfont.woff') format('woff'),
+      url('fonts/font_1937768_6u1dvkx9qjp/iconfont.ttf') format('truetype'),
+      url('fonts/font_1937768_6u1dvkx9qjp/iconfont.svg#iconfont') format('svg');
+}
+	.iconfont4 {
+  font-family: "iconfont" !important;
+  font-size: 70px;
+  font-style: normal;
+   position: absolute;
+  top:19%;
+  left: 5%;
+  color: #b69968;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+	.backgrund{
+		position: absolute;
+  		top:12%;
+  		left: 20%;
+  		width: 62%;
+  		height: 150px;
+		background-color: #e8e8e8;
+	}
+	.p6{
+		position: absolute;
+  		top:26%;
+  		left: 20%;
+  		color: #d2b48c;
+  		width: 500px;
+	}
+	.p1{
+		position: absolute;
+  		top:40%;
+  		left: 30%;
+  		color: #708090;
+  		width: 500px;
+  		font-size:25px;
+  		text-align: center;
+	}
+	.img1{
+		height: 180px;
+		position: absolute;
+		top:94%;
+  		left: 25%;
+  		transition: all 0.6s;
+	}
+	.img1:hover{
+		transform: scale(1.2);
+	}
+	.img2{
+		height: 180px;
+		position: absolute;
+		top:94%;
+  		left: 54%;
+  		transition: all 0.6s;
+	}
+	.img2:hover{
+		transform: scale(1.2);
+	}
+	.img3{
+		height: 180px;
+		position: absolute;
+		top:54%;
+  		left: 28%;
+  		transition: all 0.6s;
+	}
+	.img3:hover{
+		transform: scale(1.2);
+	}
+	.img4{
+		height: 180px;
+		position: absolute;
+		top:54%;
+  		left: 46%;
+  		transition: all 0.6s;
+	}
+	.img4:hover{
+		transform: scale(1.2);
+	}
+	.img5{
+		height: 180px;
+		position: absolute;
+		top:54%;
+  		left: 62%;
+  		transition: all 0.6s;
+	}
+	.img5:hover{
+		transform: scale(1.2);
+	}
+	.p18{
+		position: absolute;
+		top: 1092px;
+		left: 42%;
+		font-size: 20px;
+		color: #708090;
+		letter-spacing: 17px;
+	}
+	@font-face {
+  font-family: 'iconfont';
+  src: url('fonts/font_1937768_vsewhtsrst/iconfont.eot');
+  src: url('fonts/font_1937768_vsewhtsrst/iconfont.eot?#iefix') format('embedded-opentype'),
+      url('fonts/font_1937768_vsewhtsrst/iconfont.woff2') format('woff2'),
+      url('fonts/font_1937768_vsewhtsrst/iconfont.woff') format('woff'),
+      url('fonts/font_1937768_vsewhtsrst/iconfont.ttf') format('truetype'),
+      url('fonts/font_1937768_vsewhtsrst/iconfont.svg#iconfont') format('svg');
+}
+.iconfont2 {
+  font-family: "iconfont" !important;
+  font-size: 65px;
+  font-style: normal;
+   position: absolute;
+  top:32%;
+  left: 80%;
+  color: #708090;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.backgrund1{
+		position: absolute;
+  		top:136%;
+  		left: 20%;
+  		width: 62%;
+  		height: 250px;
+		background-color: #e8e8e8;
+	}
+	.img7{
+		height: 180px;
+		position: absolute;
+		top:14%;
+  		left: 17%;
+  		transition: all 0.6s;
+	}
+	.img7:hover{
+		transform: scale(1.2);
+	}
+	.img8{
+		height: 180px;
+		position: absolute;
+		top:14%;
+  		left: 32%;
+  		transition: all 0.6s;
+	}
+	.img8:hover{
+		transform: scale(1.2);
+	}
+	.img9{
+		height: 180px;
+		position: absolute;
+		top:14%;
+  		left: 47%;
+  		transition: all 0.6s;
+	}
+	.img9:hover{
+		transform: scale(1.2);
+	}
+	.img10{
+		height: 180px;
+		position: absolute;
+		top:14%;
+  		left: 62%;
+  		transition: all 0.6s;
+	}
+	.img10:hover{
+		transform: scale(1.2);
+	}
+	</style>
+</head>
+<body>
+<div id="div">
+	<div>
+<!--注意-->		<ul>
+			<li><a href="index.html">首页</a></li>
+			<li><a href="#">期末大作业</a>
+				<dl class="child">
+					<dd><a href="商品信息高级采编.html">高级采编</a></dd>
+					<dd><a href="网络营销策划与实务.html">营销策划</a></dd>
+				</dl>
+			</li>
+			<li><span class="iconfont">&#xe60b;</span></li>
+			<li><a href="关于我.html">关于我</a></li>
+			<li><a href="表单.html">联系我</a></li>
+		</ul>
+	</div>
+	<hr class="hr1">
+	<hr class="hr2">
+	<div class="backgrund">
+		<a href="商品信息高级采编.html"><span class="iconfont4">&#xe711;</span></a>
+		<p class="p6">商品信息高级采编指商品信息的采集与编辑。在电子电子商务领域中，商品信息采集的工作只要包括商品拍摄，商品图片处理，商品详情页的设计等，从而为消费者传达准确，清晰，详细的商品信息。</p>
+	</div>
+	<br><br><br>
+	<p class="p1"><strong>The journey begins</strong></p>
+	<div>
+		<a href="images/商品信息高级采编/商品拍摄实践长图.jpg" target="_blank"><img src="images/商品信息高级采编/guo1.jpg" class="img1"></a> 
+	</div>
+	<div>
+		<a href="images/商品信息高级采编/ren8.jpg" target="_blank"><img src="images/商品信息高级采编/ren8.jpg" class="img2"></a> 
+	</div>
+	<div>
+		<a href="images/商品信息高级采编/ren0.jpg" target="_blank"><img src="images/商品信息高级采编/ren_81.jpg" class="img3"></a> 
+	</div>
+	<div>
+		<a href="images/商品信息高级采编/ren2.jpg" target="_blank"><img src="images/商品信息高级采编/ren_61.jpg" class="img4"></a> 
+	</div>
+	<div>
+		<a href="images/商品信息高级采编/ren6.jpg" target="_blank"><img src="images/商品信息高级采编/ren_91.jpg" class="img5"></a> 
+	</div>
+	<p class="p18"><strong>图片均可点击~</strong></p>
+	<div  class="backgrund1">
+		<span class="iconfont2">&#xe606;</span>
+		<a href="images/商品信息高级采编/笔记1.jpg" target="_blank"><img src="images/商品信息高级采编/笔记1.jpg" class="img7"></a> 
+		<a href="images/商品信息高级采编/笔记2.jpg" target="_blank"><img src="images/商品信息高级采编/笔记2.jpg" class="img8"></a> 
+		<a href="images/商品信息高级采编/笔记3.jpg" target="_blank"><img src="images/商品信息高级采编/笔记3.jpg" class="img9"></a> 
+		<a href="images/商品信息高级采编/笔记4.jpg" target="_blank"><img src="images/商品信息高级采编/笔记4.jpg" class="img10"></a>
+	</div>
+</div>
+</body>
+</html>

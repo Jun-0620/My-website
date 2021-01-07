@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>关于我</title>
+	<style type="text/css">
+				*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			width: 900px;
+			height: 860px;
+			overflow-x: hidden;
+		}
+				#div{
+			width: 1000px;
+			overflow:hidden; 
+		}
+		/*标题-nav*/body div ul{
+			width: 85%;
+			height: 50px;
+			max-width: 90%;
+			list-style: none;
+			text-align: center;
+		}
+		div ul li{
+			display: inline-block;
+			float: left;
+			padding:0px 45px;
+			overflow: hidden;
+		}
+		ul{
+			position: absolute;
+			top: 1%;
+			left: 20%;
+		}
+		li a:hover{
+			color: #d2b48c;
+		}
+		a{
+			text-decoration: none;
+			color: #696969;
+			font-size: 18px;
+		}
+		div ul li .child{
+			display: block;
+            visibility: hidden;
+            width: 14%;
+            height: 50px;
+            background-color: rgba(255,255,255,0.8);
+            position: absolute;
+            top: 25px;
+            left: 170px;
+            z-index: 99;
+            padding-right: -30px;
+            text-align: left;
+          }
+		menu ul li:hover .child{
+			visibility: visible;
+		}
+		div ul li:hover dl{
+			display: block;
+			visibility: visible;
+			z-index: 99;
+		}
+/*装饰小云朵*/@font-face {
+  font-family: 'iconfont';
+  src: url('fonts/font_1937768_0pelog9qvgzd/iconfont.eot');
+  src: url('fonts/font_1937768_0pelog9qvgzd/iconfont.eot?#iefix') format('embedded-opentype'),
+      url('fonts/font_1937768_0pelog9qvgzd/iconfont.woff2') format('woff2'),
+      url('fonts/font_1937768_0pelog9qvgzd/iconfont.woff') format('woff'),
+      url('fonts/font_1937768_0pelog9qvgzd/iconfont.ttf') format('truetype'),
+      url('fonts/font_1937768_0pelog9qvgzd/iconfont.svg#iconfont') format('svg');
+}
+	.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 30px;
+  font-style: normal;
+  color: #708090;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+	.hr2{
+		width: 780px;
+		height: 1px;
+		color: #708090;
+		border:none; 
+		border-top: 1px solid #708090;
+		position: absolute;
+		top: 9%;
+		left: 20%;
+	}
+	.hr1{
+		width: 780px;
+		height: 1px;
+		color: #708090;
+		border:none; 
+		border-top: 1px solid #708090;
+		position: absolute;
+		top: 10%;
+		left: 20%;
+	}
+	.p1{
+		font-size: 25px;
+		position: absolute;
+		top: 14%;
+		left: 62%;
+		color: #b69968;
+	}
+			/*小三角*/@font-face {
+  font-family: 'iconfont';
+  src: url('fonts/font_1937768_ltwuxcg0iqo/iconfont.eot');
+  src: url('fonts/font_1937768_ltwuxcg0iqo/iconfont.eot?#iefix') format('embedded-opentype'),
+      url('fonts/font_1937768_ltwuxcg0iqo/iconfont.woff2') format('woff2'),
+      url('fonts/font_1937768_ltwuxcg0iqo/iconfont.woff') format('woff'),
+      url('fonts/font_1937768_ltwuxcg0iqo/iconfont.ttf') format('truetype'),
+      url('fonts/font_1937768_ltwuxcg0iqo/iconfont.svg#iconfont') format('svg');
+}
+.iconfont3 {
+  font-family: "iconfont" !important;
+  font-size: 40px;
+  font-style: normal;
+   position: absolute;
+  top: 13%;
+  left: 58%;
+  color: #b69968;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.p5{
+		font-size: 25px;
+		position: absolute;
+		top: 5%;
+		left: 62%;
+		color: #b69968;
+	}
+	.fieldset{
+			position: absolute;
+			top: 20%;
+			left: 20%;
+			width: 780px;
+			height: 500px;
+			margin:0 auto;
+			color: #696969;
+		}
+		.legend{
+			font-size: 20px;
+		}
+	.img1{
+		height: 230px;
+		position: absolute;
+		top:27%;
+  		left: 10%;
+	}
+	.p2{
+		font-size: 19px;
+		position: absolute;
+		top:17%;
+  		left:45%;
+  		color: #708090;
+	}
+	.p3{
+		color: white;
+		font-size: 18px;
+	}
+	.ellipse1{
+		border: 1px solid  #b69968;
+		width: 180px;
+		text-align: center;
+		border-radius: 24px;
+		position: absolute;
+		top:43%;
+  		left:53%;
+  		background-color: #b69968;
+	}
+	.ellipse2{
+		border: 1px solid  #4f9d9d;
+		width: 160px;
+		text-align: center;
+		border-radius: 24px;
+		position: absolute;
+		top:51%;
+  		left:53%;
+  		background-color: #4f9d9d;
+	}
+	.ellipse3{
+		border: 1px solid  #afaf61;
+		width: 120px;
+		text-align: center;
+		border-radius: 24px;
+		position: absolute;
+		top:60%;
+  		left:53%;
+  		background-color: #afaf61;
+	}
+	.ellipse4{
+		border: 1px solid  #0066cc;
+		width: 90px;
+		text-align: center;
+		border-radius: 24px;
+		position: absolute;
+		top:68%;
+  		left:53%;
+  		background-color: #0066cc;
+  	}
+  	.ellipse5{
+		border: 1px solid  #5b5b5b;
+		width: 79px;
+		text-align: center;
+		border-radius: 24px;
+		position: absolute;
+		top:76%;
+  		left:53%;
+  		background-color: #5b5b5b;
+  			}
+  	
+	</style>
+</head>
+<body>
+<div id="div">
+	<div>
+		<ul>
+			<li><a href="index.html">首页</a></li>
+			<li><a href="#">期末大作业</a>
+				<dl class="child">
+					<dd><a href="商品信息高级采编.html">高级采编</a></dd>
+					<dd><a href="网络营销策划与实务.html">营销策划</a></dd>
+				</dl>
+			</li>
+			<li><span class="iconfont">&#xe60b;</span></li>
+			<li><a href="关于我.html">关于我</a></li>
+			<li><a href="表单.html">联系我</a></li>
+		</ul>
+	</div>
+	<hr class="hr1">
+	<hr class="hr2">
+	<div>
+		<p class="p1">About me</p>
+		<span class="iconfont3">&#xe69b;</span>
+	</div>
+		<fieldset class="fieldset">
+		<legend class="legend">关于我</legend>
+			<div>
+				<img src="images/manhua.jpg" class="img1">
+				<p class="p2">大家好呀！我叫楚君，我的性格开朗，<br>拥有一颗善良执着的心，喜欢带着带<br>着大大的梦想去旅行，喜欢不断挑战<br>超越自己追求的梦想。</p>
+				<div>
+				<span class="ellipse1"><p class="p3">html</p></span>
+				<span class="ellipse2"><p class="p3">css</p></span>
+				<span class="ellipse3"><p class="p3">ps</p></span>
+				<span class="ellipse4"><p class="p3">python</p></span>
+				<span class="ellipse5"><p class="p3">js</p></span>
+				</div>
+			</div>
+		</fieldset>
+</div>
+</body>
+</html>

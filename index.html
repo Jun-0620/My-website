@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>201905730107钟楚君</title>
+	<style type="text/css">
+		body{
+			padding: 0;
+			margin: 0;
+			width:100%;
+			height: 1820px;
+			overflow-x: hidden;
+		}
+		#div{
+			width: 1000px;
+			overflow:hidden; 
+		}
+		/*标题-nav*/body div ul{
+			width: 85%;
+			height: 50px;
+			max-width: 90%;
+			list-style: none;
+			text-align: center;
+		}
+		div ul li{
+			display: inline-block;
+			float: left;
+			padding:0px 45px;
+			overflow: hidden;
+		}
+		ul{
+			position: absolute;
+			top: 1%;
+			left: 20%;
+		}
+		li a:hover{
+			color: #d2b48c;
+		}
+		a{
+			text-decoration: none;
+			color: #696969;
+			font-size: 18px;
+		}
+		div ul li .child{
+			display: block;
+            visibility: hidden;
+            width: 14%;
+            height: 50px;
+            background-color: rgba(255,255,255,0.8);
+            position: absolute;
+            top: 4px;
+            left: 170px;
+            z-index: 99;
+            padding-right: -30px;
+            text-align: left;
+          }
+		menu ul li:hover .child{
+			visibility: visible;
+		}
+		div ul li:hover dl{
+			display: block;
+			visibility: visible;
+			z-index: 99;
+		}
+/*装饰小云朵*/@font-face {
+  font-family: 'iconfont';
+  src: url('fonts/font_1937768_0pelog9qvgzd/iconfont.eot');
+  src: url('fonts/font_1937768_0pelog9qvgzd/iconfont.eot?#iefix') format('embedded-opentype'),
+      url('fonts/font_1937768_0pelog9qvgzd/iconfont.woff2') format('woff2'),
+      url('fonts/font_1937768_0pelog9qvgzd/iconfont.woff') format('woff'),
+      url('fonts/font_1937768_0pelog9qvgzd/iconfont.ttf') format('truetype'),
+      url('fonts/font_1937768_0pelog9qvgzd/iconfont.svg#iconfont') format('svg');
+}
+	.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 30px;
+  font-style: normal;
+  color: #708090;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+	
+	/*小单车*/.img1{
+		width: 62%;
+		position: absolute;
+		top: 11%;
+		left: 20%;
+	}
+	.p{
+		font-size: 24px;
+		position: absolute;
+		top: 14%;
+		left: 25%;
+		color: white;
+		letter-spacing: 12px;
+	}
+	.p2{
+		font-size: 18px;
+		position: absolute;
+		top: 67%;
+		left: 31%;
+		color: white;
+		letter-spacing: 12px;
+	}
+	.p18{
+		position: absolute;
+		top: 74%;
+		left: 46%;
+		font-size: 16px;
+		color: white;
+	}
+	.circle1{
+		width: 100px;
+		height: 100px;
+		background-color: #a9a9a9;
+		-moz-border-radius:50px;
+		-webkit-border-radius:50px;
+		border-radius: 50px;
+		position: absolute;
+		top: 84%;
+		left: 21%;
+	}
+	.circle1:hover{
+		font-size: 1.18em;
+	}
+	/*摄影的*/@font-face {
+  font-family: 'iconfont';
+  src: url('fonts/font_1937768_6u1dvkx9qjp/iconfont.eot');
+  src: url('fonts/font_1937768_6u1dvkx9qjp/iconfont.eot?#iefix') format('embedded-opentype'),
+      url('fonts/font_1937768_6u1dvkx9qjp/iconfont.woff2') format('woff2'),
+      url('fonts/font_1937768_6u1dvkx9qjp/iconfont.woff') format('woff'),
+      url('fonts/font_1937768_6u1dvkx9qjp/iconfont.ttf') format('truetype'),
+      url('fonts/font_1937768_6u1dvkx9qjp/iconfont.svg#iconfont') format('svg');
+}
+.iconfont1 {
+  font-family: "iconfont" !important;
+  font-size: 90px;
+  font-style: normal;
+  color: #708090;
+  position: absolute;
+  top: 85%;
+  left: 39%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+	.circle3{
+		width: 100px;
+		height: 100px;
+		background-color: #a9a9a9;
+		-moz-border-radius:50px;
+		-webkit-border-radius:50px;
+		border-radius: 50px;
+		position: absolute;
+		top: 84%;
+		left: 74%;
+	}
+	.iconfont1:hover ,.iconfont2:hover{
+		font-size:5.7em;
+	}
+	/*营销的*/@font-face {
+  font-family: 'iconfont';
+  src: url('fonts/font_1937768_vwmw5fbaqs/iconfont.eot');
+  src: url('fonts/font_1937768_vwmw5fbaqs/iconfont.eot?#iefix') format('embedded-opentype'),
+      url('fonts/font_1937768_vwmw5fbaqs/iconfont.woff2') format('woff2'),
+      url('fonts/font_1937768_vwmw5fbaqs/iconfont.woff') format('woff'),
+      url('fonts/font_1937768_vwmw5fbaqs/iconfont.ttf') format('truetype'),
+      url('fonts/font_1937768_vwmw5fbaqs/iconfont.svg#iconfont') format('svg');
+}
+.iconfont2 {
+  font-family: "iconfont" !important;
+  font-size:90px;
+  font-style: normal;
+   color: #708090;
+  position: absolute;
+  top: 85%;
+  left: 56%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+	.p3{
+		position: absolute;
+		top: 98%;
+		left: 38%;
+		color:  #708090;
+	}
+	.p4{
+		position: absolute;
+		top: 98%;
+		left: 54%;
+		color:  #708090;
+	}
+	.hr2{
+		width: 780px;
+		height: 1px;
+		color: #708090;
+		border:none; 
+		border-top: 1px solid #708090;
+		position: absolute;
+		top: 110%;
+		left: 20%;
+	}
+	.hr1{
+		width: 780px;
+		height: 1px;
+		color: #708090;
+		border:none; 
+		border-top: 1px solid #708090;
+		position: absolute;
+		top: 111%;
+		left: 20%;
+	}
+	.p5{
+		font-size: 25px;
+		position: absolute;
+		top: 114%;
+		left: 62%;
+		color: #b69968;
+	}
+	@font-face {
+  font-family: 'iconfont';
+  src: url('fonts/font_1937768_ltwuxcg0iqo/iconfont.eot');
+  src: url('fonts/font_1937768_ltwuxcg0iqo/iconfont.eot?#iefix') format('embedded-opentype'),
+      url('fonts/font_1937768_ltwuxcg0iqo/iconfont.woff2') format('woff2'),
+      url('fonts/font_1937768_ltwuxcg0iqo/iconfont.woff') format('woff'),
+      url('fonts/font_1937768_ltwuxcg0iqo/iconfont.ttf') format('truetype'),
+      url('fonts/font_1937768_ltwuxcg0iqo/iconfont.svg#iconfont') format('svg');
+}
+.iconfont3 {
+  font-family: "iconfont" !important;
+  font-size: 40px;
+  font-style: normal;
+   position: absolute;
+  top: 118%;
+  left: 108%;
+  color: #b69968;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.iconfont4 {
+  font-family: "iconfont" !important;
+  font-size: 70px;
+  font-style: normal;
+   position: absolute;
+  top:29%;
+  left: 5%;
+  color: #b69968;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+	.backgrund{
+		position: absolute;
+  		top:130%;
+  		left: 20%;
+  		width: 62%;
+  		height: 170px;
+		background-color: #e8e8e8;
+	}
+	.iconfont5 {
+  font-family: "iconfont" !important;
+  font-size: 70px;
+  font-style: normal;
+   position: absolute;
+  top:130%;
+  left: 79%;
+  color: #b69968;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+	.p6{
+		position: absolute;
+  		top:24%;
+  		left: 20%;
+  		color: #d2b48c;
+  		width: 500px;
+	}
+	.p7{
+		position: absolute;
+  		top:118%;
+  		left: 9%;
+  		color: #d2b48c;
+  		width: 500px;
+	}
+	.hr3{
+		width: 780px;
+		height: 1px;
+		color: #708090;
+		border:none; 
+		border-top: 1px solid #708090;
+		position: absolute;
+		top: 185%;
+		left: 20%;
+	}
+	.hr4{
+		width: 780px;
+		height: 1px;
+		color: #708090;
+		border:none; 
+		border-top: 1px solid #708090;
+		position: absolute;
+		top: 186%;
+		left: 20%;
+	}
+	.p8{
+		font-size: 25px;
+		position: absolute;
+		top: -53%;
+		left: 75%;
+		color: #b69968;
+	}
+		.backgraund2{
+			position: absolute;
+  			top:199%;
+  			left: 20%;
+  			width: 62%;
+  			height: 150px;
+			background-color: #708090;
+		}
+		.p9{
+			text-align: center;
+			margin-top: 55px;
+		}
+	</style>
+</head>
+<div id="div">
+	<div>
+<!--注意--><ul>
+			<li><a href="index.html">首页</a></li>
+			<li><a href="#">期末大作业</a>
+				<dl class="child">
+					<dd><a href="商品信息高级采编.html">高级采编</a></dd>
+					<dd><a href="网络营销策划与实务.html">营销策划</a></dd>
+				</dl>
+			</li>
+			<li><span class="iconfont">&#xe60b;</span></li>
+			<li><a href="关于我.html">关于我</a></li>
+			<li><a href="表单.html">联系我</a></li>
+		</ul>
+	</div>
+	<div>
+		<img src="images/bike.jpg" class="img1">
+		<p class="p">Welcome to Chu Jun's website</p>
+		<p class="p2">Hope you have a good day</p>
+		<p class="p18">（矢量图标可点击~)</p>
+	</div>
+	<div>
+		<span class="circle1"></span>
+		<a href="商品信息高级采编.html"><span class="iconfont1">&#xe711;</span></a>
+<!--注意--><a href="网络营销策划与实务.html"><span class="iconfont2">&#xef4e;</span></a> 
+		<span class="circle3"></span>
+	</div>
+	<div>
+		<p class="p3">商品信息高级采编</p>
+		<p class="p4">网络营销策划与实务</p>
+	</div>
+	<br><br><br>
+	<hr class="hr1">
+	<hr class="hr2">
+	<div>
+		<p class="p5">Subject introduction</p>
+		<span class="iconfont3">&#xe69b;</span>
+	</div>
+	<div class="backgrund">
+		<a href="商品信息高级采编.html"><span class="iconfont4">&#xe711;</span></a>
+		<p class="p6">商品信息高级采编指商品信息的采集与编辑。在电子电子商务领域中，商品信息采集的工作只要包括商品拍摄，商品图片处理，商品详情页的设计等，从而为消费者传达准确，清晰，详细的商品信息。</p>
+<!--注意--><a href="网络营销策划与实务.html"><span class="iconfont5">&#xef4e;</span></a>
+		<p class="p7">网络营销是基于网络及社会关系网络连接企业、用户及公众，向用户及公众传递有价值的信息与服务，为实现顾客价值及企业营销目标所进行的规划、实施及运营管理活动。</p>
+	</div>
+	<br><br>
+	<hr class="hr3">
+	<hr class="hr4">
+	<div class="backgraund2">
+		<p class="p8">Copyright page</p>
+		<p class="p9">版权归楚君所有，只能用于浏览、查看<br>使用本网页需楚君通过，违者必究</p>
+	</div>
+</div>
+</body>
+</html>
