@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <link href="css/style.css" style="text/css" rel="stylesheet">
+    <link href="css/carousel.css" rel="stylesheet">
+    <style type="text/css">
+        /*
+        1.这里是导航，共有三个，index，about，还有message,使用的是基本的胶囊式导航菜单。
+        2.能实现交互并相互。
+        3.跳转使用了bookstrap，但是不大熟练，出来的效果不明显，显示出三行打竖的导航栏，需要向右拉扯。
+        */
+    	*{
+
+    		padding: 0;
+    		margin: 0;
+    	}
+    	/*自己屏幕的水平居中*/
+    	dl {
+    		width: 1024px;
+    		/*margin: 0px 41px 0px 41px;*/
+    		text-align:center;
+    		font-size: 16px;
+            margin-top: 20px;
+            margin-left: 142px;
+            color: white;
+            z-index: 1;
+    	}
+        dd{
+            width: 100px;
+            height: 30px;
+            background-color: #708090;
+            margin-left: 27px;
+            line-height: 30px;
+            z-index: 1;
+        }
+        .p1{
+            color: white;
+        }
+        dd a:hover{
+            text-decoration: none;
+        }
+        dd:hover{
+            background-color: gray;
+        }
+        div .home1{
+            padding-left: 20px; 
+        }
+        /*banner*/
+
+        /*
+        1.这里是banner，这里使用了3D的图片旋转的动画效果。
+        2.步骤：
+        1）先将个图片旋转，8张旋转角度为45度，但是会堆成一堆。
+        2）将堆成一堆的图片加个transform-style: preserve-3d;
+        3）需要将图片都沿着Z轴方向平移一定长度。算出了translateZ的值约等于482.86px。
+        4）我们可以将容器_container向前旋转10deg即（rotateX(-10deg)）.
+        5）假设perspective:3000px；（眼睛距离屏幕3000px时观看到的效果）
+        6）需要在container外面加一个box给box加视角perspective。
+        7）最后使用perspective-origin。
+        */
+        div ._area{
+            height:350px;
+            width: 900px;
+            perspective: 3000px;
+            perspective-origin: 599px 146px;
+            margin: 30px auto;
+            padding-top: 100px;
+            background-color: white;
+            position: absolute;
+            top: 40px;
+            left: 180px;
+            z-index: 1;
+            }
+        div .box{
+            height: 160px;
+            width: 300px;
+            transform: rotateX(-8deg);
+            transform-style: preserve-3d;    
+            transition-duration: 1s;
+            margin: -5px 437px;
+            position: absolute;
+            top: 80px;
+            left: -128px;
+            z-index: 1;
+        }
+        .box img{
+            width: 300px;
+            height: 160px;
+            position: absolute;
+            cursor: pointer;
+        }
+        .box img:nth-child(1){
+            transform: rotateY(0deg) translateZ(400px);    
+        }
+        .box img:nth-child(2){
+            transform: rotateY(45deg) translateZ(400px);
+        }
+        .box img:nth-child(3){
+            transform: rotateY(90deg) translateZ(400px);
+        }
+        .box img:nth-child(4){
+            transform: rotateY(135deg) translateZ(400px);
+        }
+        .box img:nth-child(5){
+            transform: rotateY(180deg) translateZ(400px);
+        }
+        .box img:nth-child(6){
+            transform: rotateY(225deg) translateZ(400px);
+        }
+        .box img:nth-child(7){
+            transform: rotateY(270deg) translateZ(400px);
+        }
+        .box img:nth-child(8){
+            transform: rotateY(315deg) translateZ(400px);
+        }
+        .banner ul {
+            list-style: none;
+            position: absolute;
+            top: 94%;
+            left: 48.5%;
+            transform: translateX(-50%);       
+        }
+        .banner li{
+            background-color: #000;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            float: left;
+            margin-left: 5px;
+            cursor: pointer;
+        }
+        .p2{
+            font-size: 30px;
+            position: absolute;
+            top: 74%;
+            left: 45%;
+            color: #b69968;
+            background-color: white;
+        }
+        /*线性渐变*/
+
+        /*
+        1.整个页面使用了一个线性渐变作为背景。（网格形状）
+        2.把垂直和水平的条纹叠加，使 background-image恰好支持 linear-gradient叠加效果。*/
+        .item{
+            width: 1263px;
+            height: 2624px;
+            background: #708090;
+            background-image:
+            linear-gradient(white 2px, transparent 0),  
+            linear-gradient(90deg, white 2px, transparent 0);
+            background-size: 30px 30px;
+            opacity: 0.4;
+            z-index: -2;
+            position: absolute;
+            top:0px;
+            left: 0px;
+        }
+        /*白色背景*/
+        .bgc{
+            height:1130px;
+            width: 900px;
+            background-color: white;
+            position: absolute;
+            top: 528px;
+            left: 180px;
+        }
+        .p10{
+            font-size: 30px;
+            position: absolute;
+            top: 276%;
+            left: 48%;
+            color: #b69968;
+            background-color: white;
+        }
+        .bgc2{
+            height:550px;
+            width: 900px;
+            background-color: white;
+            position: absolute;
+            top: 288%;
+            left: 180px;
+        }
+
+        /*笔记*/
+        /*这里主要是放上笔记，也是图片为主，点击后转到新的网页，可以看到内容。*/
+        .glyphicon-file {
+            position: absolute;
+            top: 320%;
+            left: 17%;
+            color: #708090;
+            font-size: 60px;
+            z-index: 2;
+        }
+        .bi1{
+            position: absolute;
+            top: 106%;
+            left: 11%;
+            color: #708090;
+            font-size: 20px;
+        }
+        .img1{
+            height: 170px;
+            position: absolute;
+            top: 5%;
+            left: 14%;
+            z-index: 2;
+        }
+        .img2{
+            height:170px;
+            position: absolute;
+            top: 5%;
+            left: 36%;
+            z-index: 2;
+        }
+        .img3{
+            height: 170px;
+            position: absolute;
+            top: 5%;
+            left: 58%;
+            z-index: 2;
+        }
+        .img4{
+            height: 170px;
+            position: absolute;
+            top: 5%;
+            left: 78%;
+            z-index: 2;
+        }
+        .img5{
+            height: 170px;
+            position: absolute;
+            top: 53%;
+            left: 25%;
+            z-index: 2;
+        }
+        .img7{
+            height: 170px;
+            position: absolute;
+            top: 53%;
+            left: 48%;
+            z-index: 2;
+        }
+        .img6{
+            height: 170px;
+            position: absolute;
+            top: 53%;
+            left: 68%;
+            z-index: 2;
+        }
+        .img01{
+            width: 715px;
+            height: 400px;
+            background-color: #708090;
+            z-index: 3;
+            position: absolute;
+            top: 90%;
+            left: 28%;
+            opacity: 0.7;
+        }
+        .biji{
+            position: absolute;
+            top: 300%;
+            left: 24.5%;
+        }
+     /*日常图片*/
+
+     /*1）这里主要是放照片，尽量好看，然后对position的使用会多一点。
+        2）图片会向上平移，使用到了2D转换
+        3）旁边的文字，首字大写，用到了first-letter伪类选择器*/
+        .p02{
+            position: absolute;
+            top: 90%;
+            left: 18%;
+            font-size: 26px;
+            color: #708090; 
+        }
+        .p03{
+            position: absolute;
+            top: 96%;
+            left: 26%;
+            font-size: 16px;
+            color: gray; 
+            z-index: 3;
+        }
+
+        .img001{
+            height: 250px;
+            background-size: cover contain;
+            position: absolute;
+            top: 107%;
+            left: 27%;
+            z-index: 3;
+        }
+        .img001:hover{
+            transform: translateY(-10%);
+        }
+        .bgc001{
+            width: 200px;
+            height: 200px;
+            background-color: #708090;
+            position: absolute;
+            top: 110%;
+            left: 34%;
+            z-index: 2;
+        }
+        .p001:first-letter{
+            font-size: 2em;
+            color: pink;
+            vertical-align: middle;
+        }
+        .p001{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            top: 120%;
+            left: 60%;
+            line-height: 30px;
+        }
+        .img002{
+            height: 250px;
+            background-size: cover contain;
+            position: absolute;
+            top: 156%;
+            left: 53%;
+            z-index: 3;
+        }
+        .img002:hover{
+            transform: translateY(-10%);
+        }
+        .bgc002{
+            width: 200px;
+            height: 200px;
+            background-color: #708090;
+            position: absolute;
+            top: 170%;
+            left: 50%;
+            z-index: 2;
+        }
+         .p002:first-letter{
+            font-size: 2em;
+            color: pink;
+            vertical-align: middle;
+        }
+        .p002{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            top: 170%;
+            left: 26%;
+            line-height: 30px;
+        }
+        .img003{
+            height: 250px;
+            background-size: cover contain;
+            position: absolute;
+            top: 216%;
+            left: 22%;
+            z-index: 3;
+        }
+        .img003:hover{
+            transform: translateY(-10%);
+        }
+        .bgc003{
+            width: 200px;
+            height: 200px;
+            background-color: #708090;
+            position: absolute;
+            top: 220%;
+            left: 35.5%;
+            z-index: 2;
+        }
+        .p003:first-letter{
+            font-size: 2em;
+            color: pink;
+            vertical-align: middle;
+        }
+        .p003{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            top: 220%;
+            left: 62%;
+            line-height: 30px;
+        }
+        .p20{
+            font-size: 30px;
+            position: absolute;
+            top: 386%;
+            left: 46%;
+            color: #b69968;
+            background-color: white;
+        }
+        .bgc3{
+            height:160px;
+            width: 900px;
+            background-color: white;
+            position: absolute;
+            top: 400%;
+            left: 180px;
+        }
+        .p21{
+            text-align: center;
+            color: #708090;
+            font-size: 20px;
+            position: absolute;
+            top: 408%;
+            left: 38%;
+        }
+        /*版权*/
+        /*1）最后是版权申明，然后旁边的字体图标，是使用了bookstrap的字体图标。
+        2）比以前使用的方法简单了好多。
+        3）然后使用了锚点*/
+        .glyphicon-arrow-up{
+            color: #708090;
+            font-size: 70px;
+            position: absolute;
+            top: 408%;
+            left: 90%;
+        }
+        .p22{
+            color: #708090;
+            font-size: 20px;
+            position: absolute;
+            top: 420%;
+            left: 91.4%;
+        }
+    </style>
+</head>
+<body>
+<!-- 基本的胶囊式导航菜单 -->
+    <div class="container">
+    <div class="row">
+        <div class="span8">
+    <dl class="nav nav-pills">
+		<dd class="active col-xs-12  col-md-3"><a href="index.html"><p class="p1" id="up">Home</p></a></dd>
+		<dd class="home1 col-xs-12  col-md-3"><a href="about.html"><p class="p1">about</p></a></dd>
+		<dd class="home1 col-xs-12  col-md-3"><a href="massage.html"><p class="p1">Massage</p></a></dd>
+	</dl>
+</div> 
+</nav>
+<!-- banner -->
+   
+    <div class="_area">
+        <div class="box">
+            <img src="images/1.jpg"/>
+            <img src="images/2.jpg"/>
+            <img src="images/3.jpg"/>
+            <img src="images/4.jpg"/>
+            <img src="images/5.jpg"/>
+            <img src="images/6.jpg"/>
+            <img src="images/7.jpg"/>
+            <img src="images/8.jpg"/>
+        </div>
+        <div class="banner">
+            <ul>
+                <li style="background-color: #666;"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </div> 
+    <hr class="hr1"><hr class="hr2">
+    <p class="p2">Content</p>
+</body>
+    <!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery) -->
+      <script src="https://code.jquery.com/jquery.js" rel="external nofollow" ></script>
+      <!-- 包括所有已编译的插件 -->
+      <script src="js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">        
+        var x = 0;
+        var index = 0;
+        var timer;
+        var box = document.getElementsByClassName("box")[0];
+        var li = document.getElementsByTagName("ul")[0].getElementsByTagName("li");
+        //滚动函数
+        function roll(){
+            x  =x - 45;
+            index = (index == 7)?0:(index+1);
+            for(var i=0;i<li.length;i++){
+                li[i].style.backgroundColor = "#000";
+            }
+            li[index].style.backgroundColor = "#666";
+            box.style.transform = "rotateX(-8deg) rotateY("+x+"deg)";                
+        }
+        
+        //切换页面的时候调用(切换页面时本页面还在计时,防止切换页面回来时瞬间快速滚动。)
+        var hiddenProperty = 'hidden' in document ? 'hidden' :    
+            'webkitHidden' in document ? 'webkitHidden' :    
+            'mozHidden' in document ? 'mozHidden' :    
+            null;
+        var visibilityChangeEvent = hiddenProperty.replace(/hidden/i, 'visibilitychange');
+        //替换hiddenProperty中的hidden(忽略大小写即Hidden也会被替换形成webkitvisibilitychange)
+        var onVisibilityChange = function(){
+            if (!document[hiddenProperty]) {
+                timer = setInterval(roll,2000);
+            }else{
+                
+                clearInterval(timer);
+            }
+        }
+        document.addEventListener(visibilityChangeEvent,onVisibilityChange);
+        
+        //点击图片滚动
+        box.onclick = function(){
+            clearInterval(timer);
+            roll();
+            setTimeout(function(){
+                clearInterval(timer);
+                timer = setInterval(roll,2000);
+            },2000);
+        }
+        timer = setInterval(roll,2000);
+        
+        //点击小圆点滚动
+        for(var i =0;i<li.length;i++){
+            li[i].xuhao = i;
+            
+            li[i].onclick = function(){    
+            clearInterval(timer);
+                for(var i=0;i<li.length;i++){
+                    li[i].style.backgroundColor = "#000";
+                }
+            li[this.xuhao].style.backgroundColor = "#666";
+            x = x+(index-this.xuhao)*45;
+            box.style.transform = "rotateX(-8deg) rotateY("+x+"deg)";
+            index = this.xuhao;
+            setTimeout(function(){
+                clearInterval(timer);
+                timer = setInterval(roll,2000);
+            },2000);
+            }            
+        }
+    </script>
+
+    <!-- 线性渐变 -->
+ <div class="item"></div>
+<!-- 分割线 -->
+ <div class="item1"></div>
+
+ <!-- 背景图1 -->
+ <div class="bgc"></div>
+
+<!-- 日常图片 -->
+<p class="p02">Daily photos:</p>
+<p class="p03">万事都要全力以赴，包括开心~</p>
+<div class="content-inner">
+    <div >
+        <div><a href="images/001.jpg" target="_blank">
+        <img src="images/001.jpg" class="img001" ><div class="bgc001"></div></a> </div>
+    </div>
+    <p class="p001">我们是老了也要一起一点喝奶茶铺里最新的奶茶，一边回忆年轻时候喜欢的爱豆~</p>
+    <div >
+        <div><a href="images/002.jpg" target="_blank">
+        <img src="images/002.jpg" class="img002" ><div class="bgc002"></div></a> </div>
+        <p class="p002">我希望我的朋友开心，谈恋爱开心，单身也开心，不要委屈自己。各自忙碌，想我的时候记得旁边是我~</p>
+    </div>
+        <div><a href="images/003.jpg" target="_blank">
+        <img src="images/003.jpg" class="img003" ><div class="bgc003"></div></a> </div>
+        <p class="p003">小朋友，我知道最近很忙很烦很累，再坚持一下！再难也会过去的，再难也会有全力以赴的快乐，你，要做一个全宇宙最快乐的小朋友~</p>
+    </div>
+        
+<!-- 背景图2 -->
+<div class="bgc2"></div>
+
+ <p class="p10">Notes</p>
+ 
+  <span class="glyphicon glyphicon-file"><p class="bi1">笔记</p></span> 
+  <div class="biji">
+  <!-- 笔记 -->
+    <div class="img01">
+        <div><a href="images/01.jpg" target="_blank"><img src="images/01.jpg" class="img1"></a> </div>
+        <div><a href="images/02.jpg" target="_blank"><img src="images/02.jpg" class="img2"></a> </div>
+        <div><a href="images/03.jpg" target="_blank"><img src="images/03.jpg" class="img3"></a> </div>
+        <div><a href="images/04.jpg" target="_blank"><img src="images/04.jpg" class="img4"></a> </div>
+        <div><a href="images/05.jpg" target="_blank"><img src="images/05.jpg" class="img5"></a> </div>
+        <div><a href="images/06.jpg" target="_blank"><img src="images/06.jpg" class="img6"></a> </div>
+        <div><a href="images/07.jpg" target="_blank"><img src="images/07.jpg" class="img7"></a> </div>
+    </div>
+</div>
+<p class="p20">Copyright:</p>
+<!-- 背景图3 -->
+<div class="bgc3"></div>
+<p class="p21">版权归楚君所有，只能用于浏览、查看<br>使用本网页需楚君通过，违者必究</p></p>
+
+<!-- 锚点 -->
+<a href="#up"><span class="glyphicon glyphicon-arrow-up"></span> </a>
+<p class="p22">返回</p>
+</body>
+</html>
+
+
+<!-- 最后的表单的话，主要是考虑input的不同表单的使用方法。 -->
+    
